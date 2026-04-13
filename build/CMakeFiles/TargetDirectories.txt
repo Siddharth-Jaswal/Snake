@@ -1,0 +1,3 @@
+D:/Repos/Snake/build/CMakeFiles/SnakeSFML.dir
+D:/Repos/Snake/build/CMakeFiles/edit_cache.dir
+D:/Repos/Snake/build/CMakeFiles/rebuild_cache.dir
