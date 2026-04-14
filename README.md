@@ -174,9 +174,40 @@ objdump -p build/SnakeSFML.exe | findstr sfml
 ## Controls
 
 - Arrow keys control the snake
+- `W`, `A`, `S`, `D` also control the snake
 - `Enter` starts or restarts
 - `Esc` exits
 
 ## Notes
 
 - The game tries to load a font from `assets/fonts/` first, then falls back to common system font paths.
+
+## itch.io Release
+
+For a Windows itch.io upload, package the built executable together with the required runtime DLLs in a single folder.
+
+Recommended bundle contents:
+
+```text
+SnakeSFML.exe
+sfml-system-3.dll
+sfml-window-3.dll
+sfml-graphics-3.dll
+libstdc++-6.dll
+libgcc_s_seh-1.dll
+libwinpthread-1.dll
+README.txt
+```
+
+Upload either:
+
+- a `.zip` containing those files at the root, or
+- the folder itself if you are using `butler`
+
+Suggested itch.io settings:
+
+- Platform: `Windows`
+- Kind of project: `Downloadable`
+- Classification: `Game`
+
+If you want the game to launch directly from the itch app, keep the executable at the top level of the uploaded archive and set the launch target to `SnakeSFML.exe`.
